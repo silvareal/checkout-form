@@ -1,1 +1,1 @@
-# checkout-form
+![](checkout.gif)

@@ -1,0 +1,74 @@
+.card-form {
+    &__form {
+        margin-top: -122px;
+        padding: 148px 35px 35px 35px;
+
+        .form-input {
+            margin-bottom: 20px;
+
+            &__label {
+                font-size: 14px;
+                margin-bottom: 5px;
+                font-weight: 500;
+                color: #1a3b5d;
+                width: 100%;
+                display: block;
+                user-select: none;
+            }
+
+            &__input {
+                width: 100%;
+                height: 50px;
+                border-radius: 5px;
+                box-shadow: none;
+                border: 1px solid #ced6e0;
+                transition: all 0.3s ease-in-out;
+                font-size: 18px;
+                padding: 5px 15px;
+                background: none;
+                color: #1a3b5d;
+                font-family: "Source Sans Pro",
+                sans-serif;
+
+                &:hover {
+                    border: 1px solid goldenrod;
+                }
+
+                &.select {
+                    -webkit-appearance: none;
+                    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUxJREFUeNrM1sEJwkAQBdCsngXPHsQO9O5FS7AAMVYgdqAd2IGCDWgFnryLFQiCZ8EGnJUNimiyM/tnk4HNEAg/8y6ZmMRVqz9eUJvRaSbvutCZ347bXVJy/ZnvTmdJ862Me+hAbZCTs6GHpyUi1tTSvPnqTpoWZPUa7W7ncT3vK4h4zVejy8QzM3WhVUO8ykI6jOxoGA4ig3BLHcNFSCGqGAkig2yqgpEiMsjSfY9LxYQg7L6r0X6wS29YJiYQYecemY+wHrXD1+bklGhpAhBDeu/JfIVGxaAQ9sb8CI+CQSJ+QmJg0Ii/EE2MBiIXooHRQhRCkBhNhBcEhLkwf05ZCG8ICCOpk0MULmvDSY2M8UawIRExLIQIEgHDRoghihgRIgiigBEjgiFATBACAgFgghEwSAAGgoBCBBgYAg5hYKAIFYgHBo6w9RRgAFfy160QuV8NAAAAAElFTkSuQmCC");
+                    background-repeat: no-repeat;
+                    background-size: 14px;
+                    margin-right: 20px;
+                    background-position: 90% center;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+
+            &__row {
+                display: flex;
+            }
+
+            &__col {
+                flex: auto;
+            }
+
+            &__group {
+                display: inline-flex;
+                width: 100%;
+
+                &::first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+    }    
+}
+
+.-cvv {
+    max-width: 150px;
+    margin-left: 35px;
+}
+

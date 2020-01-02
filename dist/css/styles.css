@@ -1,0 +1,420 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700|Source+Sans+Pro:400,600,700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.5rem;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+  scroll-behavior: smooth !important;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #ddeefc;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+.checkout-form {
+  margin: 0 auto;
+  max-width: 570px;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 30px;
+  background: #fff;
+  position: relative;
+  margin-top: 300px;
+}
+
+.-card-input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(242, 208, 208, 0.5);
+  text-transform: uppercase;
+}
+
+.card-form__container {
+  margin-top: -362px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.card-form__card {
+  height: 270px;
+  width: 430px;
+  margin: auto;
+  border-radius: 15px;
+  margin-top: 200px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
+  position: relative;
+}
+.card-form__item {
+  -webkit-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  -moz-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  -o-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.card-input {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/img/card.jpg");
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  -moz-user-select: none;
+}
+.card-input__top {
+  display: flex;
+  justify-content: space-between;
+}
+.card-input__top img {
+  height: 50px;
+}
+.card-input__body {
+  font-size: 2.2em;
+  color: #e8d98b;
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition: 0.6s ease-out;
+  -o-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  padding: 9px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 50px;
+}
+.card-input__bottom {
+  display: inline-flex;
+}
+.card-input__bottom .card-holder {
+  flex: 1;
+}
+.card-input__bottom .card-holder label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #c8b655;
+}
+.card-input__bottom .card-holder div {
+  text-transform: uppercase;
+  margin-right: 28px;
+  text-align: left;
+  color: #e8d98b;
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition: 0.6s ease-out;
+  -o-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+  padding: 9px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+}
+.card-input__bottom .card-expires {
+  max-width: 150px;
+}
+.card-input__bottom .card-expires label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #c8b655;
+}
+.card-input__bottom .card-expires div {
+  margin-right: 28px;
+  text-align: left;
+  color: #e8d98b;
+  transition: 0.6s ease-out;
+  padding: 9px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  min-width: 97px;
+}
+.card-input .dark-top {
+  background: black;
+  height: 57px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+}
+.card-input .white-center {
+  margin-top: 60px;
+  text-align: right;
+}
+.card-input .white-center label {
+  color: #c8b655;
+  padding: 10px 10px 0 10px;
+}
+.card-input .white-center div {
+  background: white;
+  height: 54px;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 20px;
+  font-family: italic;
+}
+.card-input .img-bottom img {
+  float: right;
+  margin-top: 10px;
+}
+
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.back {
+  -webkit-transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
+  -moz-transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
+  -o-transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
+  transform: perspective(2000px) rotateY(-180deg) rotateX(0deg) rotate(0deg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/img/card.jpg");
+}
+
+.flip {
+  -webkit-transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotate(0deg);
+  -moz-transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotate(0deg);
+  -o-transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotate(0deg);
+  transform: perspective(1000px) rotateY(180deg) rotateX(0deg) rotate(0deg);
+}
+
+.card-form__form {
+  margin-top: -122px;
+  padding: 148px 35px 35px 35px;
+}
+.card-form__form .form-input {
+  margin-bottom: 20px;
+}
+.card-form__form .form-input__label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #1a3b5d;
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+.card-form__form .form-input__input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: 1px solid #ced6e0;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  padding: 5px 15px;
+  background: none;
+  color: #1a3b5d;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.card-form__form .form-input__input:hover {
+  border: 1px solid goldenrod;
+}
+.card-form__form .form-input__input.select {
+  -webkit-appearance: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeCAYAAABuUU38AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUxJREFUeNrM1sEJwkAQBdCsngXPHsQO9O5FS7AAMVYgdqAd2IGCDWgFnryLFQiCZ8EGnJUNimiyM/tnk4HNEAg/8y6ZmMRVqz9eUJvRaSbvutCZ347bXVJy/ZnvTmdJ862Me+hAbZCTs6GHpyUi1tTSvPnqTpoWZPUa7W7ncT3vK4h4zVejy8QzM3WhVUO8ykI6jOxoGA4ig3BLHcNFSCGqGAkig2yqgpEiMsjSfY9LxYQg7L6r0X6wS29YJiYQYecemY+wHrXD1+bklGhpAhBDeu/JfIVGxaAQ9sb8CI+CQSJ+QmJg0Ii/EE2MBiIXooHRQhRCkBhNhBcEhLkwf05ZCG8ICCOpk0MULmvDSY2M8UawIRExLIQIEgHDRoghihgRIgiigBEjgiFATBACAgFgghEwSAAGgoBCBBgYAg5hYKAIFYgHBo6w9RRgAFfy160QuV8NAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-size: 14px;
+  margin-right: 20px;
+  background-position: 90% center;
+  outline: none;
+  cursor: pointer;
+}
+.card-form__form .form-input__row {
+  display: flex;
+}
+.card-form__form .form-input__col {
+  flex: auto;
+}
+.card-form__form .form-input__group {
+  display: inline-flex;
+  width: 100%;
+}
+.card-form__form .form-input__group::first-child {
+  margin-right: 20px;
+}
+
+.-cvv {
+  max-width: 150px;
+  margin-left: 35px;
+}
+
+.btn {
+  color: #332626;
+  width: 100%;
+  text-decoration: none;
+  padding: 13px 0;
+  border-radius: 3px;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 6px;
+  font-weight: 499;
+  margin-top: 20px;
+  background: goldenrod;
+}
+.btn:hover {
+  background: #b68a1b;
+  transition: all 0.3s ease;
+}
+.btn:active {
+  background: #6b5110;
+}
+
+/*# sourceMappingURL=styles.css.map */

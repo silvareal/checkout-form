@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Checkout Form</title>
+</head>
+
+<body>
+    <section>
+        <div class="checkout-form">
+            <div class="card-form__container">
+                <div class="card-form__card" id="top">
+
+                    <div class="card-form__item front">
+                        <div class="card-input">
+                            <div class="card-input__top">
+                                <img class="chip" src="./assets/img/chip.png" alt="" srcset="">
+                                <img class="visa" src="./assets/img/visa.png" alt="" srcset="">
+                            </div>
+
+                            <div class="card-input__body  card-number">#### #### #### ####</div>
+
+                            <div class="card-input__bottom">
+                                <div class="card-holder">
+                                    <label>Card Holder</label>
+                                    <div class="full-name">FULL NAMES</div>
+                                </div>
+
+                                <div class="card-expires">
+                                    <label>Expires</label>
+                                    <div class="expires-card"><span class="expires-mm">MM</span> / <span
+                                            class="expires-yy">YYYY</span></div>
+                                </div>
+
+                            </div>
+                        </div class="card-input">
+                    </div>
+
+                    <div class="card-form__item back">
+                        <div class="card-input" style="position: relative;">
+                            <div class="dark-top"></div>
+
+                            <div class="white-center">
+                                <label>CVV</label>
+                                <div class="card-cvv"></div>
+                            </div>
+                            <div class="img-bottom">
+                                <img height="50" class="visa" src="./assets/img/visa.png" alt="" srcset="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-form__form">
+                <div class="form-input">
+                    <label class="form-input__label" for="cardNumber">Card Number</label>
+                    <input type="text" name="cardNumber" tabindex=1 id="cardNumber" maxlength="19"
+                        class="form-input__input">
+                </div>
+
+                <div class="form-input">
+                    <label class="form-input__label" for="cardName">Card Holder</label>
+                    <input type="text" name="cardName" tabindex=2 id="cardName" class="form-input__input"
+                        class="form-input__input" maxlength="20">
+                </div>
+                <div class="form-input__row">
+                    <div class="form-input__col">
+                        <label class="form-input__label" for="expirationDate">Expiration
+                            Date</label>
+                        <div class="form-input__group">
+                            <select tabindex=3 id="cardMonth" data-ref="cardDate" class="form-input__input select">
+                                <option value="" disabled="disabled" selected="selected">Month</option>
+                                <option value="01">
+                                    01
+                                </option>
+                                <option value="02">
+                                    02
+                                </option>
+                                <option value="03">
+                                    03
+                                </option>
+                                <option value="04">
+                                    04
+                                </option>
+                                <option value="05">
+                                    05
+                                </option>
+                                <option value="06">
+                                    06
+                                </option>
+                                <option value="07">
+                                    07
+                                </option>
+                                <option value="08">
+                                    08
+                                </option>
+                                <option value="09">
+                                    09
+                                </option>
+                                <option value="10">
+                                    10
+                                </option>
+                                <option value="11">
+                                    11
+                                </option>
+                                <option value="12">
+                                    12
+                                </option>
+                            </select>
+                            <select id="cardYear" tabindex=4 data-ref="cardDate" class="form-input__input select">
+                                <option value="" disabled="disabled" selected="selected">Year</option>
+                                <option value="2019">
+                                    2019
+                                </option>
+                                <option value="2020">
+                                    2020
+                                </option>
+                                <option value="2021">
+                                    2021
+                                </option>
+                                <option value="2022">
+                                    2022
+                                </option>
+                                <option value="2023">
+                                    2023
+                                </option>
+                                <option value="2024">
+                                    2024
+                                </option>
+                                <option value="2025">
+                                    2025
+                                </option>
+                                <option value="2026">
+                                    2026
+                                </option>
+                                <option value="2027">
+                                    2027
+                                </option>
+                                <option value="2028">
+                                    2028
+                                </option>
+                                <option value="2029">
+                                    2029
+                                </option>
+                                <option value="2030">
+                                    2030
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-input__col -cvv">
+                        <div class="form-input">
+                            <label class="form-input__label" for="cvv">CVV</label>
+                            <input type="text" tabindex=5 name="cardCvv" id="cvv" class="form-input__input"
+                                maxlength="3">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn" tabindex=6 type="submit"><i class="fa fa-lock" aria-hidden="true"> </i> Submit
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script>
+        let cvvInput = document.getElementById('cvv');
+        let cardCvv = document.querySelector('.card-cvv');
+        let container = document.getElementById('top');
+
+        let cardNumberInput = document.getElementById('cardNumber');
+        let cardNumber = document.querySelector('.card-number');
+
+        let cardNameInput = document.getElementById('cardName');
+        let cardName = document.querySelector('.full-name');
+
+        let cardExpiresInput = document.querySelectorAll('.select');
+        let cardExpires = document.querySelector('.expires-card');
+        let cardMonth = document.getElementById('cardMonth');
+        let cardYear = document.getElementById('cardYear');
+        let expiresMonth = document.querySelector('.expires-mm');
+        let expiresYear = document.querySelector('.expires-yy');
+
+
+        cvvInput.onfocus = () => {
+            container.classList.add('flip');
+        }
+
+        cvvInput.onblur = () => {
+            container.classList.remove('flip');
+        }
+
+        cvvInput.oninput = () => {
+            cardCvv.innerHTML = cvvInput.value;
+        }
+
+        cardNumberInput.onfocus = () => {
+            cardNumber.classList.add('-card-input')
+        }
+
+        cardNumberInput.oninput = () => {
+            cardNumber.innerHTML = cardNumberInput.value;
+        }
+
+        cardNumberInput.onkeypress = (evt) => {
+            let charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+            return true;
+        }
+
+        cvvInput.onkeypress = (evt) => {
+            let charCode = (evt.which) ? evt.which : evt.keyCode
+            evt.target.value = evt.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+            return true;
+        }
+
+        cardNumberInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+        });
+        cardNumberInput.onblur = () => {
+            cardNumber.classList.remove('-card-input')
+        }
+
+        cardNameInput.onfocus = () => {
+            cardName.classList.add('-card-input')
+        }
+
+        cardNameInput.onblur = () => {
+            cardName.classList.remove('-card-input')
+        }
+
+        cardNameInput.oninput = () => {
+            cardName.innerHTML = cardNameInput.value;
+        }
+
+        cardExpiresInput.forEach((e) => {
+            e.onfocus = () => {
+                cardExpires.classList.add('-card-input')
+            }
+
+            e.onblur = () => {
+                cardExpires.classList.remove('-card-input')
+            }
+        })
+
+        cardMonth.oninput = () => {
+            expiresMonth.innerHTML = cardMonth.value;
+        }
+
+        cardYear.oninput = () => {
+            expiresYear.innerHTML = cardYear.value;
+        }
+    </script>
+</body>
+
+</html>

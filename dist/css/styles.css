@@ -181,16 +181,16 @@ body {
   margin: auto;
   border-radius: 15px;
   margin-top: 200px;
-  transition: 0.6s;
+  transition: 300ms;
   transform-style: preserve-3d;
   box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
   position: relative;
 }
 .card-form__item {
-  -webkit-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-  -moz-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-  -o-transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
-  transition: all 0.8s cubic-bezier(0.71, 0.03, 0.56, 0.85);
+  -webkit-transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
   transform-style: preserve-3d;
   backface-visibility: hidden;
   position: absolute;

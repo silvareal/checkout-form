@@ -16,7 +16,7 @@
         margin: auto;
         border-radius: 15px;
         margin-top: 200px;
-        transition: 0.6s;
+        transition: 300ms;
         transform-style: preserve-3d;
         box-shadow: 0 20px 60px 0 rgba(14, 42, 90, 0.55);
         position: relative;
@@ -25,7 +25,7 @@
     }
 
     &__item {
-        @include transition(1.6s ease-in-out);
+        @include transition(300ms ease-in-out);
         transform-style: preserve-3d;
         backface-visibility: hidden;
         position: absolute;
